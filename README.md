@@ -12,6 +12,10 @@ View, add to, and update a database containing information on departments, roles
 
 Using CRUD methods in the back-end to create, view, and update data from a database using SQL.
 
+### Screenshot
+
+<img src = "assets/images/screenshot.png" alt = "fullscreen" width = "500px">
+
 ### Concepts
 
 - #### CRUD
