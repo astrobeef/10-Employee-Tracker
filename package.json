@@ -1,0 +1,24 @@
+{
+  "name": "10-employee-tracker",
+  "version": "1.0.0",
+  "description": "Packet manager for my employee tracker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astrobeef/10-Employee-Tracker.git"
+  },
+  "author": "Brian Graf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astrobeef/10-Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/astrobeef/10-Employee-Tracker#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0",
+    "mysql": "^2.17.1"
+  }
+}
