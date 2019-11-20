@@ -246,7 +246,7 @@ function updateQuestion() {
         console.log("Updating role with info");
         console.log(updateInfo);
 
-        updateInfo.role_id = parseInt(updateInfo.role_id);
+        role_id = parseInt(updateInfo.role_id);
 
         if(paramsAreReal_Update(updateInfo))
         {
