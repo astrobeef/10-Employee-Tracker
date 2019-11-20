@@ -82,6 +82,20 @@ const Q_View = {
     choices: [{ name: "Departments", value: "department" }, { name: "Roles", value: "role" }, { name: "Employees", value: "employee" }]
 }
 
+const Q_UpdateRole = [{
+    type : "input",
+    name : "first_name",
+    message : "What is the first name of the employee you would like to update?"
+},{
+    type : "input",
+    name : "last_name",
+    message : "What is their last name?"
+},{
+    type : "input",
+    name : "role_id",
+    message : "What is the ID of the role you would like to set for them?"
+}]
+
 //---FUNCTIONS---//
 
 function initialQuestion() {
@@ -184,8 +198,6 @@ function addQuestions() {
 function viewQuestion() {
     inquirer.prompt(Q_View).then(answer => {
 
-        view(answer.dataType);
-
         switch(answer.dataType)
         {
             case("department"):
@@ -229,8 +241,31 @@ function updateQuestion() {
 
     //Inquirer questions to get : which role to update AND information to update
 
-    inquirer.prompt(Q_UpdateRole)
+    inquirer.prompt(Q_UpdateRole).then((updateInfo) =>{
+
+        console.log("Updating role with info");
+        console.log(updateInfo);
+
+        updateInfo.role_id = parseInt(updateInfo.role_id);
+
+        if(paramsAreReal_Update(updateInfo))
+        {
+            connection.query("UPDATE employee SET role_id = ? WHERE first_name = ? AND last_name = ?", [updateInfo.role_id, updateInfo.first_name, updateInfo.last_name],(err, res) => {if(err) throw err;  initialQuestion()});
+        }
+        else
+        {
+            console.warn("Incorrect input");
+            initialQuestion();
+        }
+
+    })
 
     //...Then, send parameters to 'update()'
 
+}
+
+//This function checks if all of the incoming parameters, for the Update call, are true.
+function paramsAreReal_Update(updateInfo)
+{
+    return true;
 }
