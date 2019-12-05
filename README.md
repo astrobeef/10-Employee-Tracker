@@ -14,7 +14,12 @@ Using CRUD methods in the back-end to create, view, and update data from a datab
 
 ### Screenshot
 
-<img src = "assets/images/screenshot.png" alt = "fullscreen" width = "500px">
+<img src = "assets/images/screenshot.png" alt = "fullscreen" width = "800px">
+<img src = "assets/images/screenshot-views.png" alt = "fullscreen" width = "800px">
+<img src = "assets/images/screenshot-update.png" alt = "fullscreen" width = "800px">
+<img src = "assets/images/screenshot-addingRole.png" alt = "fullscreen" width = "800px">
+<img src = "assets/images/screenshot-addingDepartment.png" alt = "fullscreen" width = "800px">
+<img src = "assets/images/screenshot-addingEmployee.png" alt = "fullscreen" width = "800px">
 
 ### Concepts
 
